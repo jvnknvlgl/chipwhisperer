@@ -31,7 +31,7 @@ SRC += sys_exit.c
 #I guess some ASM is cool too
 ASRC += entry.S trap.S vector.S crt0.S
 
-MCU_FLAGS = -march=rv32imac -mabi=ilp32 -mcmodel=medlow
+MCU_FLAGS = -march=rv32imac_zicsr_zifencei -mabi=ilp32 -mcmodel=medlow -fcommon
 
 CC = riscv64-unknown-elf-gcc
 OBJCOPY = riscv64-unknown-elf-objcopy
